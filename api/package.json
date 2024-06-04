@@ -1,0 +1,20 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start:dev": "nodemon -L --env-file=.env.development src/index.js",
+    "docker:build": "docker build -t atheek/express-api:latest .",
+    "docker:run": "docker run -v %cd%:/user/src/app/ --name api atheek/express-api:latest",
+    "docker:stop": "docker stop api"
+  },
+  "keywords": [],
+  "author": "Atheek Naheem",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.3"
+  }
+}
